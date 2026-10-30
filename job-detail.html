@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Senior Civil Engineer – Dubai, UAE | Gulf Jobs Hub</title>
-  <meta name="description" content="Senior Civil Engineer job in Dubai, UAE. Visa sponsored. Salary AED 18,000–25,000. Apply now on Gulf Jobs Hub.">
+  <title id="pageTitle">Senior Civil Engineer – Dubai, UAE | Gulf Jobs Hub</title>
+  <meta name="description" id="pageDesc" content="Senior Civil Engineer job in Dubai, UAE. Visa sponsored. Salary AED 18,000–25,000. Apply now on Gulf Jobs Hub.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://gulfjobshub.com/job-detail.html?id=1">
+  <link rel="canonical" id="canonicalLink" href="https://gulfjobs.salaroutsourcing.com/job-detail.html">
+  <meta property="og:url" content="https://gulfjobs.salaroutsourcing.com/job-detail.html">
+  <meta property="og:image" content="https://gulfjobs.salaroutsourcing.com/images/og-cover.svg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- JobPosting Schema – Critical for AI & Google Jobs -->
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="jobSchema">
   {
     "@context": "https://schema.org",
     "@type": "JobPosting",
@@ -23,7 +28,7 @@
     "hiringOrganization": {
       "@type": "Organization",
       "name": "Confidential Leading Construction Company",
-      "sameAs": "https://gulfjobshub.com"
+      "sameAs": "https://gulfjobs.salaroutsourcing.com"
     },
     "jobLocation": {
       "@type": "Place",
@@ -44,7 +49,6 @@
         "unitText": "MONTH"
       }
     },
-    "jobLocationType": "TELECOMMUTE",
     "applicantLocationRequirements": {
       "@type": "Country",
       "name": "United Arab Emirates"
@@ -65,7 +69,7 @@
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -73,12 +77,12 @@
     <div class="container" style="max-width: 800px;">
       <a href="jobs.html" style="font-size: 0.95rem; margin-bottom: 20px; display: inline-block;">← Back to Jobs</a>
       
-      <article class="job-card" style="padding: 32px;">
+      <article class="job-card" style="padding: 32px;" id="jobDetailCard">
         <div class="job-header">
-          <h1 style="font-size: 1.6rem;">Senior Civil Engineer</h1>
-          <span class="badge visa">Visa Sponsored</span>
+          <h1 id="jobTitle" style="font-size: 1.6rem;">Senior Civil Engineer</h1>
+          <span id="jobBadge" class="badge visa">Visa Sponsored</span>
         </div>
-        <div class="job-meta" style="margin-bottom: 24px;">
+        <div class="job-meta" id="jobMeta" style="margin-bottom: 24px;">
           <span>📍 Dubai, United Arab Emirates</span>
           <span>💰 AED 18,000 – 25,000 / month</span>
           <span>📅 Full-time</span>
@@ -86,12 +90,12 @@
         </div>
 
         <h2 style="font-size: 1.2rem; margin-bottom: 12px;">Job Description</h2>
-        <p style="margin-bottom: 16px; color: var(--text-muted);">
+        <p id="jobDesc" style="margin-bottom: 16px; color: var(--text-muted);">
           A leading construction firm in Dubai is seeking an experienced Senior Civil Engineer to join their team on major infrastructure and building projects. The ideal candidate will have strong technical knowledge, site leadership skills and a proven track record in the Gulf region.
         </p>
 
         <h3 style="font-size: 1.05rem; margin: 20px 0 10px;">Key Responsibilities</h3>
-        <ul style="padding-left: 20px; list-style: disc; color: var(--text-muted); margin-bottom: 20px;">
+        <ul id="jobResponsibilities" style="padding-left: 20px; list-style: disc; color: var(--text-muted); margin-bottom: 20px;">
           <li>Supervise and coordinate site activities for civil works</li>
           <li>Review designs, drawings and method statements</li>
           <li>Ensure quality, safety and schedule compliance</li>
@@ -100,7 +104,7 @@
         </ul>
 
         <h3 style="font-size: 1.05rem; margin: 20px 0 10px;">Requirements</h3>
-        <ul style="padding-left: 20px; list-style: disc; color: var(--text-muted); margin-bottom: 20px;">
+        <ul id="jobRequirements" style="padding-left: 20px; list-style: disc; color: var(--text-muted); margin-bottom: 20px;">
           <li>Bachelor’s degree in Civil Engineering</li>
           <li>Minimum 7 years relevant experience (Gulf experience preferred)</li>
           <li>Strong knowledge of international standards and local regulations</li>
@@ -109,7 +113,7 @@
         </ul>
 
         <h3 style="font-size: 1.05rem; margin: 20px 0 10px;">Benefits</h3>
-        <ul style="padding-left: 20px; list-style: disc; color: var(--text-muted); margin-bottom: 28px;">
+        <ul id="jobBenefits" style="padding-left: 20px; list-style: disc; color: var(--text-muted); margin-bottom: 28px;">
           <li>Competitive salary + housing allowance</li>
           <li>Annual air ticket</li>
           <li>Medical insurance</li>
@@ -117,12 +121,13 @@
         </ul>
 
         <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
-          <strong>How to Apply:</strong> Send your updated CV to the employer using the contact method provided in the original posting, or follow the application instructions on the company career page. Always verify the company before sharing personal documents.
+          <strong>How to Apply:</strong> Send your updated CV to our recruitment desk via the <a href="contact.html">Contact Us</a> page or message our official <a href="https://www.facebook.com/profile.php?id=61595872135029" target="_blank" rel="noopener">Facebook page</a> mentioning the job title. Always verify the company before sharing personal documents.
         </div>
 
-        <p style="font-size: 0.9rem; color: var(--text-muted);">
-          <em>Note: This is a sample job posting template. Replace with real job data and keep the JobPosting schema updated for every live listing. This structure helps Google and AI systems understand and cite your jobs.</em>
-        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="contact.html" id="applyBtn" class="btn btn-primary">Apply for This Role</a>
+          <a href="https://www.facebook.com/profile.php?id=61595872135029" target="_blank" rel="noopener" class="btn btn-outline">Apply via Facebook →</a>
+        </div>
       </article>
     </div>
   </section>

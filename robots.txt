@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gulfjobshub.com/sitemap.xml
+Sitemap: https://gulfjobs.salaroutsourcing.com/sitemap.xml
 
 # Allow major AI crawlers for citation (GEO)
 User-agent: GPTBot

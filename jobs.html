@@ -6,10 +6,14 @@
   <title>Latest Gulf Jobs 2026 – UAE, Saudi Arabia, Qatar, Kuwait, Oman | Gulf Jobs Hub</title>
   <meta name="description" content="Browse the latest verified Gulf jobs with visa sponsorship. Filter by country, category and salary. Updated daily for UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://gulfjobshub.com/jobs.html">
+  <link rel="canonical" href="https://gulfjobs.salaroutsourcing.com/jobs.html">
   <meta property="og:title" content="Latest Gulf Jobs – Search & Apply Today">
   <meta property="og:description" content="Find jobs in UAE, Saudi, Qatar and all GCC countries. Free search, visa info included.">
+  <meta property="og:url" content="https://gulfjobs.salaroutsourcing.com/jobs.html">
+  <meta property="og:image" content="https://gulfjobs.salaroutsourcing.com/images/og-cover.svg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,7 +32,7 @@
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -45,8 +49,10 @@
 
   <section class="section" style="padding-top: 32px;">
     <div class="container">
-      <form class="filters" action="jobs.html" method="get">
+      <form class="filters" action="jobs.html" method="get" id="jobFiltersForm">
+        <label for="jobKeyword" class="sr-only">Keyword</label>
         <input type="text" name="q" id="jobKeyword" placeholder="Keyword (title, skill...)" style="flex:1; min-width:180px;">
+        <label for="jobCountry" class="sr-only">Country</label>
         <select name="country" id="jobCountry">
           <option value="">All Countries</option>
           <option value="uae">UAE</option>
@@ -56,7 +62,8 @@
           <option value="bahrain">Bahrain</option>
           <option value="oman">Oman</option>
         </select>
-        <select name="cat">
+        <label for="jobCat" class="sr-only">Category</label>
+        <select name="cat" id="jobCat">
           <option value="">All Categories</option>
           <option value="engineering">Engineering</option>
           <option value="healthcare">Healthcare</option>
@@ -68,10 +75,13 @@
           <option value="logistics">Logistics</option>
         </select>
         <button type="submit" class="btn btn-primary">Filter</button>
+        <a href="jobs.html" class="btn btn-outline" id="resetFiltersBtn" style="display:none; padding: 10px 16px;">Reset</a>
       </form>
 
-      <div class="jobs-list">
-        <article class="job-card">
+      <div id="filterStatus" style="margin-bottom: 16px; color: var(--text-muted); font-size: 0.95rem; display: none;"></div>
+
+      <div class="jobs-list" id="jobsListContainer">
+        <article class="job-card" data-id="1" data-country="uae" data-cat="construction engineering">
           <div class="job-header">
             <h3><a href="job-detail.html?id=1">Senior Civil Engineer</a></h3>
             <span class="badge visa">Visa Sponsored</span>
@@ -86,7 +96,7 @@
           <a href="job-detail.html?id=1" class="job-link">View & Apply →</a>
         </article>
 
-        <article class="job-card">
+        <article class="job-card" data-id="2" data-country="saudi" data-cat="healthcare">
           <div class="job-header">
             <h3><a href="job-detail.html?id=2">Registered Nurse – ICU</a></h3>
             <span class="badge visa">Visa Sponsored</span>
@@ -101,7 +111,7 @@
           <a href="job-detail.html?id=2" class="job-link">View & Apply →</a>
         </article>
 
-        <article class="job-card">
+        <article class="job-card" data-id="3" data-country="qatar" data-cat="it">
           <div class="job-header">
             <h3><a href="job-detail.html?id=3">Software Engineer (Full Stack)</a></h3>
             <span class="badge hot">Hot</span>
@@ -116,7 +126,7 @@
           <a href="job-detail.html?id=3" class="job-link">View & Apply →</a>
         </article>
 
-        <article class="job-card">
+        <article class="job-card" data-id="4" data-country="uae" data-cat="hospitality">
           <div class="job-header">
             <h3><a href="job-detail.html?id=4">Hotel Front Office Manager</a></h3>
             <span class="badge visa">Visa Sponsored</span>
@@ -131,7 +141,7 @@
           <a href="job-detail.html?id=4" class="job-link">View & Apply →</a>
         </article>
 
-        <article class="job-card">
+        <article class="job-card" data-id="5" data-country="saudi" data-cat="engineering">
           <div class="job-header">
             <h3><a href="job-detail.html?id=5">Mechanical Engineer – Oil & Gas</a></h3>
             <span class="badge visa">Visa Sponsored</span>
@@ -146,7 +156,7 @@
           <a href="job-detail.html?id=5" class="job-link">View & Apply →</a>
         </article>
 
-        <article class="job-card">
+        <article class="job-card" data-id="6" data-country="bahrain" data-cat="finance">
           <div class="job-header">
             <h3><a href="job-detail.html?id=6">Accountant</a></h3>
             <span class="badge visa">Visa Sponsored</span>
@@ -160,10 +170,46 @@
           <p class="job-excerpt">Trading company requires experienced Accountant familiar with VAT and IFRS. Immediate requirement.</p>
           <a href="job-detail.html?id=6" class="job-link">View & Apply →</a>
         </article>
+
+        <article class="job-card" data-id="7" data-country="kuwait" data-cat="education">
+          <div class="job-header">
+            <h3><a href="job-detail.html?id=7">Mathematics Teacher (International School)</a></h3>
+            <span class="badge visa">Visa Sponsored</span>
+          </div>
+          <div class="job-meta">
+            <span>📍 Kuwait City, Kuwait</span>
+            <span>💰 KWD 950 – 1,300 / month</span>
+            <span>📅 Full-time</span>
+            <span>🏢 Education</span>
+          </div>
+          <p class="job-excerpt">Leading British-curriculum school in Kuwait City seeking qualified Secondary Mathematics Teacher. Tax-free salary, furnished apartment and annual flights provided.</p>
+          <a href="job-detail.html?id=7" class="job-link">View & Apply →</a>
+        </article>
+
+        <article class="job-card" data-id="8" data-country="oman" data-cat="logistics">
+          <div class="job-header">
+            <h3><a href="job-detail.html?id=8">Logistics & Supply Chain Supervisor</a></h3>
+            <span class="badge visa">Visa Sponsored</span>
+          </div>
+          <div class="job-meta">
+            <span>📍 Muscat, Oman</span>
+            <span>💰 OMR 1,100 – 1,500 / month</span>
+            <span>📅 Full-time</span>
+            <span>🏢 Logistics</span>
+          </div>
+          <p class="job-excerpt">Regional distribution group hiring a Logistics Supervisor with experience in port operations, customs clearance and warehouse management in Oman.</p>
+          <a href="job-detail.html?id=8" class="job-link">View & Apply →</a>
+        </article>
+      </div>
+
+      <div id="noJobsFound" style="display:none; text-align:center; padding: 40px 20px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);">
+        <h3 style="margin-bottom: 8px;">No matching jobs found</h3>
+        <p style="color: var(--text-muted); margin-bottom: 16px;">Try adjusting your keyword, country or category filter.</p>
+        <a href="jobs.html" class="btn btn-primary">Show All Jobs</a>
       </div>
 
       <p class="text-center mt-2" style="color: var(--text-muted);">
-        Showing sample jobs. When you go live, replace these with your real listings or connect a job feed / CMS.
+        Updated daily with verified Gulf employment opportunities. Follow our <a href="https://www.facebook.com/profile.php?id=61595872135029" target="_blank" rel="noopener">Facebook page</a> for instant job alerts.
       </p>
     </div>
   </section>

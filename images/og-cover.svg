@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f4c81"/>
+      <stop offset="50%" stop-color="#1a6bb5"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="240" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="64" font-weight="800" fill="#ffffff">🌍 Gulf <tspan fill="#e0b83a">Jobs</tspan> Hub</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="600" fill="#e2e8f0">Find Verified Jobs with Visa Sponsorship in the Gulf</text>
+  <text x="600" y="400" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="500" fill="#cbd5e1">UAE • Saudi Arabia • Qatar • Kuwait • Bahrain • Oman</text>
+  <rect x="420" y="460" width="360" height="64" rx="12" fill="#e0b83a"/>
+  <text x="600" y="502" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="700" fill="#0f172a">gulfjobs.salaroutsourcing.com</text>
+</svg>

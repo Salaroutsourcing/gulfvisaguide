@@ -40,10 +40,10 @@
 3. Go to Settings → Pages → Source: Deploy from branch `main` / root
 4. Your site will be live at `https://yourusername.github.io` or custom domain
 
-### Custom Domain (Recommended)
-- Buy a domain such as `gulfjobshub.com`, `gulfjobs.com`, `findgulfjobs.com`, `gulfcareers.com`
-- Point DNS to GitHub Pages
-- Update all `https://gulfjobshub.com` references in the HTML files and sitemap.xml
+### Custom Domain
+- Live custom domain: `https://gulfjobs.salaroutsourcing.com`
+- Configured via `CNAME` pointing to GitHub Pages
+- All canonical URLs, Open Graph tags, JSON-LD schemas, `robots.txt`, and `sitemap.xml` are configured for `https://gulfjobs.salaroutsourcing.com`
 
 ## Next Steps to Make Real Money
 
